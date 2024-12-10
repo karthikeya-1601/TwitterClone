@@ -29,6 +29,11 @@ const initializeDbAndServer = async () => {
 }
 initializeDbAndServer()
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Twitter Clone!");
+});
+
+
 app.post('/register/', async (request, response) => {
   const {username, password, name, gender} = request.body
 
